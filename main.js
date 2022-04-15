@@ -845,7 +845,7 @@ class DragonShot extends Projectile {
     super(game, animation, x, y, 'down', 9);
     this.isDragonShot = true;
     this.bounding = new Rectangle(x, y, 80, 80);
-    this.hitSound = AM.getAsset('./snd/hit.ogg');
+    this.hitSound = AM.getAsset('./snd/hit.wav');
     this.game.sounds.add(this.hitSound);
   }
 
@@ -1283,7 +1283,7 @@ class Stomp {
     this.bounding = new Rectangle(x, y, 256, 256);
     this.cooldown = 1;
     this.damage = 9;
-    this.hitSound = AM.getAsset('./snd/hit.ogg');
+    this.hitSound = AM.getAsset('./snd/hit.wav');
     this.game.sounds.add(this.hitSound);
     switch (type) {
       case 'jump':
@@ -1847,7 +1847,7 @@ class EnemyStrike extends Strike {
     super(gameEngine, x, y, direction, 1);
     this.hit = false;
     this.damage = damage;
-    this.sound = AM.getAsset('./snd/hit.ogg');
+    this.sound = AM.getAsset('./snd/hit.wav');
     this.game.sounds.add(this.sound);
   }
 
@@ -1883,7 +1883,7 @@ class GolemStrike extends EnemyStrike {
 class BombStrike extends EnemyStrike {
   constructor(gameEngine, x, y, direction, damage){
     super(gameEngine, x, y, direction, damage);
-    this.sound = AM.getAsset('./snd/bomb8Bit.m4a');
+    this.sound = AM.getAsset('./snd/boom.wav');
     this.game.sounds.add(this.sound);
   }
 }
@@ -1965,12 +1965,12 @@ AM.queueDownload('./snd/strength.wav');
 AM.queueDownload('./snd/goblin.wav');
 AM.queueDownload('./snd/wraith.wav');
 AM.queueDownload('./snd/beholder_shoot.wav');
-AM.queueDownload('./snd/hit.ogg');
+AM.queueDownload('./snd/hit.wav');
 AM.queueDownload('./snd/win.wav');
 AM.queueDownload('./snd/shoot.wav');
 AM.queueDownload('./snd/death.wav');
 AM.queueDownload('./snd/dragonFire.wav');
-AM.queueDownload('./snd/bomb8Bit.m4a');
+AM.queueDownload('./snd/boom.wav');
 AM.queueDownload('./snd/golemSmash-2.wav');
 
 
